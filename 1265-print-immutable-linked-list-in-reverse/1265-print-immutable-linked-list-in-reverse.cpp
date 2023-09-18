@@ -10,11 +10,23 @@
 
 class Solution {
 public:
+    typedef ImmutableListNode* node_pointer_t;
+    
     void printLinkedListInReverse(ImmutableListNode* head) {
         /* reached end of list */
-        if(head != NULL) {
-            printLinkedListInReverse(head->getNext());
-            head->printValue();
+        std::stack<node_pointer_t> arr{}; 
+
+        node_pointer_t ptr = head;
+        while(ptr) {
+            arr.push(ptr);
+            ptr = ptr->getNext();
         }
+    
+        while(!arr.empty()){
+            arr.top()->printValue();
+            arr.pop();
+        }
+        
+        return;
     }
 };
