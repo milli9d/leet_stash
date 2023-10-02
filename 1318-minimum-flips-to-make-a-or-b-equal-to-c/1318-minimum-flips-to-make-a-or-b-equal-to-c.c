@@ -8,5 +8,5 @@ uint32_t count_bits(uint32_t n) {
 }
 
 int minFlips(int a, int b, int c) {
-    return count_bits((a | b) ^ c) + count_bits(a & b & ((a | b) ^ c));    
+    return count_bits((a | b) ^ c) + count_bits((a & b) & ((a | b) ^ c));    
 }
