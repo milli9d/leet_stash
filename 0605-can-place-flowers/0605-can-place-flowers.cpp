@@ -14,10 +14,11 @@ class Solution {
                 if (left_empty && right_empty) {
                     flowerbed[i] = 1u;
                     count++;
-                    if(count >= n) { return true; }
                 }
             }
+            /* early exit */
+            if(count >= n) { return true; }
         }
-        return (n <= count);
+        return (count >= n);
     }
 };
