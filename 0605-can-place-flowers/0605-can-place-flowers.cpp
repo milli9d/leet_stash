@@ -16,8 +16,7 @@ class Solution {
                     count++;
                 }
             }
-            /* early exit */
-            if(count >= n) { return true; }
+
         }
         return (count >= n);
     }
