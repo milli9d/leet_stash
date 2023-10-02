@@ -13,6 +13,9 @@ public:
             itr++;
         }
 
-        std::fill(insert_itr, nums.end(), 0u);
+        while(insert_itr != nums.end()){
+            *(insert_itr++) = 0u;
+        }
+        
     }
 };
