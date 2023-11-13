@@ -1,3 +1,10 @@
+auto init = []{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return false;
+}();
+
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
