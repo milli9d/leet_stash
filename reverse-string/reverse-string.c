@@ -1,4 +1,4 @@
-static void _swap(char* a, char* b)
+static inline void _swap(char* a, char* b)
 {
     *a = *a ^ *b;
     *b = *a ^ *b;
